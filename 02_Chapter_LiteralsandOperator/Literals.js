@@ -1,5 +1,5 @@
 // Primitive data types: String, Number, Boolean, BigInt, Symbol, Null, Undefined
-// Non-Primitive data types: Array, Objects, Functions. They can be further breakdown.
+// Non-Primitive data types: Array, Objects, Functions, Date object and Regular Expression. They can be further breakdown.
 
 // Number Literals
 
