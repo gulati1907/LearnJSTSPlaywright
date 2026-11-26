@@ -1,6 +1,7 @@
 // Ordered coolection of values. Zero indexed.
 //JS arrays are dynamic and can have mixed values.
 //type[] is object. user Array.isArray() to check.
+//Arrays are mutable in nature. If you assign the array to a new array. Any change in new array also gets reflected in original array.
 
 const browser = ["Chrome", "Firefox", "Safari"]
 console.log(browser[0]); // Index of values: 0,1,2
@@ -118,8 +119,93 @@ let marks1 = [10,20,50,90,15,91]
 let grades1 = marks1.filter(s => s >= 45 ); // Using filter , we are filtering the elements.
 console.log(grades1); //[ 50, 90, 91 ]
 
+// Sorting
+let fruits = ["banana", "strawberry", "apple", "mango"];
+console.log(fruits); // [ 'banana', 'strawberry', 'apple', 'mango' ]
+fruits.sort();
+console.log(fruits); // [ 'apple', 'banana', 'mango', 'strawberry' ]
+
+let newMark =[4,3,2]
+newMark.sort();
+console.log(newMark); // [ 2, 3, 4 ]
+
+let nums = [10, 1 , 21, 2];
+nums.sort();
+console.log(nums); // [ 1, 10, 2, 21 ]. This is called natural sorting or lexicographic sorting or by default it will use the first character. Dictonary order.
+
+let actualSort = [10, 1 , 21, 2];
+actualSort.sort((a,b) => a-b); // until a-b becomes +ve.
+console.log(actualSort); // [ 1, 2, 10, 21 ]
+actualSort.sort((a,b) => b-a); // reverse sorting
+console.log(actualSort); // [ 21, 10, 2, 1 ]
+
+let fruits1 = ["banana", "strawberry", "apple", "mango"];
+console.log(fruits1); // [ 'banana', 'strawberry', 'apple', 'mango' ]
+fruits1.sort((a,b) => a.localeCompare(b)); // use local compare in case of string to get actual sort.
+console.log(fruits1); [ 'apple', 'banana', 'mango', 'strawberry' ]
+
+//Slice.
+//Slice (start,end) : returns new array.
+// It uses the index. (start,end-1)
+
+
+let mine = [1,2,3,4,5];
+console.log(mine.slice(1,3)); // [ 2, 3 ]. Here it start from index 1 which is value 2. in the end parameter, passed value is 3 but actually it becomes 3-1: 2. Array will be created from index 1 to index 2.
+console.log(mine); // [ 1, 2, 3, 4, 5 ]
+console.log(mine.slice(2)); //[ 3, 4, 5 ] As no edn paramter has been passed. It will slice all values from index 2.
+console.log(mine.slice(-2)); // [ 4, 5 ]
+console.log(mine.slice(0)); // every element will come.
+console.log(mine.slice(-5)); // every element will come.
+console.log(mine.slice(-3,-5)); // empty array []. Direction is wrong to get the elements. Move only left to right.
+
+// Concat or Combining.
+let v = [1,2];
+let v1 = [3,4];
+let v2 = v.concat(v1);
+console.log(v2); // [ 1, 2, 3, 4 ]
+ 
+let v3 = [...v,...v1]; // ... (Triple dot is called Spread. Modern way of concat. pass the value in array.)
+console.log(v3); // [ 1, 2, 3, 4 ]
+
+// Checking an Array.
+
+let s = [1,2];
+let s1 = [3,4];
+let s2 = "a";
+let s3 = [];
+console.log(Array.isArray(s)); // True
+console.log(Array.isArray(s1)); // True
+console.log(Array.isArray(s2)); // False
+console.log(Array.isArray(s3)); // True
+
+// Every. It return boolean. All elements should pass the condition.
+let m1 = [10,20,50,90,15,91]
+let g1 = m1.every(s => s >= 45 );
+console.log(g1); //false
 
 
 
+let m1 = [10,20,50,90,15,91]
+let g1 = m1.some(s => s >= 45 ); // Some of the elements should be true.
+console.log(g1); // true
 
+//Deconstructing of an Array.
+
+let [first, second, third] = [1,2,3];
+console.log(first); //1
+console.log(second); //2
+console.log(third); //3
+
+let [first1, second1, ...third] = [1,2,3,4,5];
+console.log(first1); //1
+console.log(second1); //2
+console.log(...third); //3,4,5
+
+let [, , thirdOnly] = [1,2,3];
+console.log(thirdOnly); //3
+
+let swap = 1;
+let swap1 = 2;
+[swap, swap1] = [swap1, swap];
+console.log(swap,swap1); // 2,1 Swapping
 

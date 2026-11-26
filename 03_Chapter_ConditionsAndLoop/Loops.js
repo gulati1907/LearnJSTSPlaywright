@@ -46,7 +46,10 @@ let count = 0;
 for (let m = 5; m < 5 ; m++){
     count++;
 }
-console.log(count); //0
+console.log(count); //0function greet(){
+    console.log("Hi");
+}
+greet();
 
 // While loop.
 
