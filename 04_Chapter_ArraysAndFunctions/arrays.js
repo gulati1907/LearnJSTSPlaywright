@@ -120,10 +120,10 @@ let grades1 = marks1.filter(s => s >= 45 ); // Using filter , we are filtering t
 console.log(grades1); //[ 50, 90, 91 ]
 
 // Sorting
-let fruits = ["banana", "strawberry", "apple", "mango"];
-console.log(fruits); // [ 'banana', 'strawberry', 'apple', 'mango' ]
-fruits.sort();
-console.log(fruits); // [ 'apple', 'banana', 'mango', 'strawberry' ]
+let sortFruits = ["banana", "strawberry", "apple", "mango"];
+console.log(sortFruits); // [ 'banana', 'strawberry', 'apple', 'mango' ]
+sortFruits.sort();
+console.log(sortFruits); // [ 'apple', 'banana', 'mango', 'strawberry' ]
 
 let newMark =[4,3,2]
 newMark.sort();
@@ -142,7 +142,7 @@ console.log(actualSort); // [ 21, 10, 2, 1 ]
 let fruits1 = ["banana", "strawberry", "apple", "mango"];
 console.log(fruits1); // [ 'banana', 'strawberry', 'apple', 'mango' ]
 fruits1.sort((a,b) => a.localeCompare(b)); // use local compare in case of string to get actual sort.
-console.log(fruits1); [ 'apple', 'banana', 'mango', 'strawberry' ]
+console.log(fruits1); // [ 'apple', 'banana', 'mango', 'strawberry' ]
 
 //Slice.
 //Slice (start,end) : returns new array.
@@ -185,9 +185,9 @@ console.log(g1); //false
 
 
 
-let m1 = [10,20,50,90,15,91]
-let g1 = m1.some(s => s >= 45 ); // Some of the elements should be true.
-console.log(g1); // true
+let m2 = [10,20,50,90,15,91]
+let g2 = m2.some(s => s >= 45 ); // Some of the elements should be true.
+console.log(g2); // true
 
 //Deconstructing of an Array.
 
@@ -196,10 +196,10 @@ console.log(first); //1
 console.log(second); //2
 console.log(third); //3
 
-let [first1, second1, ...third] = [1,2,3,4,5];
+let [first1, second1, ...rest] = [1,2,3,4,5];
 console.log(first1); //1
 console.log(second1); //2
-console.log(...third); //3,4,5
+console.log(...rest); //3,4,5
 
 let [, , thirdOnly] = [1,2,3];
 console.log(thirdOnly); //3

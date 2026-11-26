@@ -29,10 +29,10 @@ for (let saurabh=0 ; saurabh>1 ; saurabh++)
     console.log(saurabh)
 } // no puput in this case.
 
-for (let saurabh1=0 ;  ; saurabh1++)
-{
-    console.log(saurabh1)
-} // This will go infinite.
+// for (let saurabh1=0 ;  ; saurabh1++)
+// {
+//     console.log(saurabh1)
+// } // This will go infinite. Commented out so the rest of the file can run.
 
 for (let me = 0; me < 18; me++) {
     if (me > 15) {
@@ -46,10 +46,7 @@ let count = 0;
 for (let m = 5; m < 5 ; m++){
     count++;
 }
-console.log(count); //0function greet(){
-    console.log("Hi");
-}
-greet();
+console.log(count); //0
 
 // While loop.
 
